@@ -32,6 +32,6 @@ app.use('/states', statesRouter);
 
 
 // START SERVER
-app.listen(port, () => {console.log('Express is ready');
+app.listen(PORT, () => {console.log('Express Server is Up');
 })
 
