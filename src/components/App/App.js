@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <h1 style={{background: 'blue'}}> This is gonna be fun</h1>
+      <h1> MY REACT STARTER PACK</h1>
     </>
   );
 }
