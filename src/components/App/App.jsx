@@ -9,7 +9,7 @@ import {
 import {useDispatch, useSelector} from 'react-redux';
 
 import RegisterPage from '../Register/RegisterPage';
-import LandingPage from '../LandingPage/LandingPage';
+import LandingPage from '../LoginPage/LoginPage';
 
 
 

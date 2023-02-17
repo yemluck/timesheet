@@ -1,0 +1,30 @@
+h2 {
+  margin-left: 5px;
+}
+
+.loginForm {
+    box-sizing: border-box;
+      width: 400px;
+      max-width: 100%;
+      padding: 25px;
+      margin: 0 auto 20px;
+      background-color: beige;
+      border-radius: 3px;
+      box-shadow: 0 1ox 2px black;
+}
+
+.loginBtn {
+  display: inline-block;
+  padding: 10px 20px 10px;
+  border-color: #5b8bca;
+  background-color: #e78383;
+  font-size: 1.1rem;
+  outline: 0;
+  cursor: pointer;
+  border-width: 1px 1px 3px;
+  border-radius: 4px;
+}
+
+.loginBtn:hover {
+  background-color: antiquewhite;
+}
