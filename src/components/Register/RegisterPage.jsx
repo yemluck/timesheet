@@ -7,7 +7,7 @@ function RegisterPage(){
   return (
     <>
     <RegisterForm />
-    <button onClick={()=> console.log("in submit button")}> Login </button>
+    {/* <button onClick={()=> console.log("in submit button")}> Login </button> */}
     </>
   )
 } // end function RegisterPage

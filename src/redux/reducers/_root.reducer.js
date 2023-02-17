@@ -1,4 +1,7 @@
 import { combineReducers } from 'redux';
+import errors from './errors.reducer';
+import user from './user.reducer';
+
 // will have to import every reducers into the root reducer
 
 // rootReducer is the primary reducer for our entire project
@@ -11,6 +14,8 @@ import { combineReducers } from 'redux';
 const rootReducer = combineReducers({
     // will contain our imported reducers
     // currently I have no reducer
+    errors,
+    user,
 });
 
 export default rootReducer;
