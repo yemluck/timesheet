@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import './RegisterForm.css'
 
 
 
@@ -25,7 +26,7 @@ function RegisterForm(){
     }) // end dispatch
   } // end registerUser
   return (
-    <form onSubmit ={registerUser}>
+    <form className="registerContainer" onSubmit ={registerUser}>
       <h2>Register User</h2>
       {/* {errors.registrationMessage && (
         <h3 className="alert" role="alert">
@@ -84,7 +85,7 @@ function RegisterForm(){
         </label>
       </div>
       <div>
-        <input className="btn" type="submit" name="submit" value="Register" />
+        <input className="registerBtn" type="submit" name="submit" value="Register" />
       </div>
 
 
