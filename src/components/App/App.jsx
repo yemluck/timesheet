@@ -1,25 +1,43 @@
+import React, {useEffect} from 'react';
 import './App.css';
 import {
-  HashRouter as Router,
-  Redirect,
+  BrowserRouter as Router,
+  Navigate,
   Route,
-  Switch
+  Routes
 } from 'react-router-dom';
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 import {useDispatch, useSelector} from 'react-redux';
 
 import RegisterPage from '../Register/RegisterPage';
-import LandingPage from '../LoginPage/LoginPage';
+import LoginPage from '../LoginPage/LoginPage';
+import DefaultPage from '../DefaultPage/DefaultPage';
+
 
 
 
 function App() {
+
+  const dispatch = useDispatch();
+  const user = useSelector(store=> store.user);
+
+  useEffect(() => {
+    dispatch({type: 'FETCH_USER'})
+  }, [dispatch])
+
+  const loginFunction = () => {
+    user.id ? <Navigate to="/default" /> : <LoginPage />
+  }
   return (
-    <>
-      <LandingPage />
-      <RegisterPage />
-      
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        {/* <Route path="/login" element={loginFunction()} /> */}
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/default" element={<DefaultPage />} />
+      </Routes>
+    </Router>
   );
 }
 

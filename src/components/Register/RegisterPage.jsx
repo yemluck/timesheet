@@ -1,13 +1,16 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 import RegisterForm from './RegisterForm';
 
 function RegisterPage(){
 
+  const navigate = useNavigate();
+
   return (
     <>
     <RegisterForm />
-    {/* <button onClick={()=> console.log("in submit button")}> Login </button> */}
+    <button style={{marginRight: "30px", padding: "20px", marginLeft: "20px"}} onClick={()=> navigate("/")}> Login </button>
+      {/* <Link to="/default"><button style={{marginLeft: "300px"}}>Default Page</button></Link> */}
     </>
   )
 } // end function RegisterPage
